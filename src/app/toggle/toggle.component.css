@@ -1,0 +1,72 @@
+.togg{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  
+  }
+  
+  .tit-togg{
+  
+    font-size: x-large;
+    font-weight: bold;
+    color: hsl(232, 13%, 33%);
+  
+  }
+  
+  .toggle{
+  
+    font-size: 1rem;
+    color:hsl(234, 14%, 74%);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  
+  }
+  
+  .text-toggle{
+  
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .switch{
+  
+    position: relative;
+    height: 21px;
+    width: 40px;
+    border-radius: 20px;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    cursor: pointer;
+  
+  }
+  
+  
+  .switch::before{
+  
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 1;
+    left: 3px;
+    bottom: 3px;
+  
+  }
+  
+  input{
+  
+    display: none;
+  
+  }
+  
+  input:checked+ .switch::before{
+  
+    transform: translateX(20px);
+  }

@@ -1,0 +1,126 @@
+app-card{
+
+  text-align: center;
+  max-width: 350px;
+
+}
+
+mat-card{
+
+  margin-top: 50px;
+  width: 20vw;
+  height:55vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+h2{
+
+  color: rgb(112, 110, 110);
+  font-size:medium;
+  font-weight: 500;
+
+}
+
+#dol{
+
+  font-size: xx-large;
+}
+
+#valor1{
+
+  font-size: 50px;
+  padding: -50px;
+}
+
+.valor{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  margin: 30px;
+
+}
+
+p{
+
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#card{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(219, 219, 230);
+  transition: transform 0.5s;
+
+}
+
+.paragrafo{
+
+  color: rgb(112, 110, 110);
+}
+
+#card:hover{
+
+  transform: scale(1.1);
+  background-color: rgb(122, 122, 221);
+  color: white;
+  cursor: pointer;
+}
+
+#card:hover p {
+
+  transform: scale(1.1);
+  background-color: rgb(122, 122, 221);
+  color: white;
+  cursor: pointer;
+}
+
+
+#card:hover dol {
+
+  transform: scale(1.1);
+  background-color: rgb(122, 122, 221);
+  color: white;
+  cursor: pointer;
+}
+
+#card:hover h2 {
+
+  transform: scale(1.1);
+  background-color: rgb(122, 122, 221);
+  color: white;
+  cursor: pointer;
+}
+
+#card button{
+
+  width: 250px;
+  background-color: white;
+  color: hsl(237, 63%, 64%);
+  margin-top: 30px;
+}
+
+hr{
+
+  width: 250px;
+
+}
+
+#card hr{
+
+  background-color: white;
+  height: 0.1mm;
+  border: none;
+  border-width: 0;
+}

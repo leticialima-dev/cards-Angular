@@ -1,0 +1,18 @@
+<mat-card id="card">
+    <h2>{{titulo}}</h2>
+  <div class="valor">
+    <p id="dol">{{dollar}}</p>
+    <p id="valor1">{{subtitulo}}</p>
+  </div>
+  <div class="paragrafo" >
+    <hr size="1">
+    <p>{{para01}}</p>
+    <hr size="">
+    <p>{{para02}}</p>
+    <hr size="">
+    <p>{{para03}}</p>
+    <hr size="">
+  </div>
+  <button id="btn" mat-stroked-button (click)="openSnackBar('PACOTE COMPRADO!', 'OK')">LEARN MORE</button>
+
+</mat-card>
