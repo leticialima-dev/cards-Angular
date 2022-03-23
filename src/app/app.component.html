@@ -1,35 +1,201 @@
 
-<app-toggle class="togg"></app-toggle>
 <div class="wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Formulário de Inscrição</mat-card-title>
+  </mat-card-header>
+    <mat-card-content>
+    <form
+     action="#" 
+     id="main-form" 
+     (ngSubmit)="submit()"
+     #form="ngForm"
+    >
+      <div class="form-angular row" >
+        <mat-form-field appearance="fill" id="grow" >
+          <mat-label>Nome</mat-label>
+          <input id="grow" type="text" matInput placeholder="Digite seu nome."
+          [(ngModel)]="name"
+          name="name"
+          autocomplete="false"
+          required
+          minlength="3"
+         #inputName="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputName.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputName.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-angular row">        
+        <mat-form-field appearance="fill" id="grow" >
+          <mat-label>Sobrenome</mat-label>
+          <input type="text" matInput placeholder="Digite seu sobrenome."
+          [(ngModel)]="lastname"
+          name="lastname"
+          autocomplete="false"
+          required
+          minlength="3"
+         #inputLastName="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputLastName.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputLastName.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>  
+      <div class="form-angular row" > 
+        <mat-form-field appearance="fill" id="grow" >
+          <mat-label>Username</mat-label>
+          <input type="text" matInput placeholder="Username"
+          [(ngModel)]="user"
+          name="username"
+          autocomplete="false"
+          required
+          minlength="6"
+         #inputUser="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputUser.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputUser.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-angular row">
+        <mat-form-field appearance="fill" id="grow"  >
+          <mat-label>Telefone</mat-label>
+          <input type="tel" matInput placeholder="Digite seu telefone"
+          [(ngModel)]="phone"
+          name="phone"
+          autocomplete="false"
+          required
+          minlength="11"
+         #inputPhone="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputPhone.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputPhone.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" id="grow"  >
+          <mat-label>CPF</mat-label>
+          <input type="string" matInput placeholder="Digite seu CPF"
+          [(ngModel)]="cpf"
+          name="cpf"
+          autocomplete="false"
+          required
+          minlength="11"
+         #inputCpf="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputCpf.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputCpf.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+        </div>
+        <div class="form-angular row"> 
+        <mat-form-field appearance="fill" id="grow" >
+          <mat-label>Endereço</mat-label>
+          <input type="text" matInput placeholder="Digite seu endereço."
+          [(ngModel)]="addressUser"
+          name="adressUser"
+          autocomplete="false"
+          required
+          minlength="6"
+         #inputadressUser="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputadressUser.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputadressUser.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field> 
+        <mat-form-field appearance="fill"id="grow"  >
+          <mat-label>Complemento</mat-label>
+          <input type="texto" matInput placeholder="Digite o complemento do endereço."
+          [(ngModel)]="address2User"
+          name="address2User"
+          autocomplete="false"
+          minlength="6"
+         #inputaddress2User="ngModel"
+          >
+        </mat-form-field>
+      </div>
+        <div class="form-angular row">
+        <mat-form-field appearance="fill" id="grow" >
+          <mat-label>Digite sua Senha</mat-label>
+          <input type="password" matInput placeholder="Digite sua senha."
+          [(ngModel)]="password"
+          name="password"
+          autocomplete="false"
+          minlength="6"
+          required
+         #inputpassword="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputpassword.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputpassword.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field  appearance="fill"  id="grow" >
+          <mat-label>Confirme sua senha</mat-label>
+          <input type="confirmpass" matInput placeholder="Confirme a senha digitada."
+          [(ngModel)]="confirmpass"
+          name="confirmpass"
+          required=""
+          autocomplete="false"
+          minlength="6"
+         #inputConfirmpass="ngModel"
+          >
+          <mat-error>
+            <span *ngIf="inputConfirmpass.getError('required')">
+              Você não preencheu o campo corretamente.
+            </span>
+            <span *ngIf="inputConfirmpass.getError('minlength')">
+              Este campo é obrigatório!
+            </span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-row col">
+        <button  mat-raised-button
+        type="submit"
+         color="accent"
+         id="grow-btn"
+         [disabled]="form.invalid"
+         (click)="submit()"
+         >Cadastrar</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+</div>
 
-    <app-card
-     titulo="Basic"
-     dollar="$"
-     subtitulo="19.99"
-     para01="500 GB Storage"
-     para02="2 Users Allowed"
-     para03="Send up to 3 GB"
-     >
-    </app-card>
-  
-    <app-card id="card"
-     titulo="Professional"
-     dollar="$"
-     subtitulo="24.99"
-     para01="1 TB Storage"
-     para02="5 Users Allowed"
-     para03="Send up to 10 GB"
-    >
-    </app-card>
-  
-    <app-card
-     titulo="Master"
-     dollar="$"
-     subtitulo="39.99"
-     para01="2 TB Storage"
-     para02="10 Users Allowed"
-     para03="Send up to 20 GB"
-    >
-    </app-card>
-  
-  </div>
